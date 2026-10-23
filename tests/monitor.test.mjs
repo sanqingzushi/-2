@@ -22,6 +22,14 @@ test('source quote time remains distinct from collection time', () => {
   assert.equal(value.iopv,null);
   assert.equal(value.premiumPercent,null);
 });
+test('historical chart retains only source observations, and futures can be negative', () => {
+  const p=payload(); p.chart.result[0].timestamp=[(now-86400000)/1000,(now-10000)/1000];
+  p.chart.result[0].indicators={quote:[{close:[99,null]}]};
+  const parsed=parseYahoo(p,item,now);
+  assert.deepEqual(parsed.history,[{time:now-86400000,value:99}]);
+  const f=payload(); Object.assign(f.chart.result[0].meta,{symbol:'CL=F',instrumentType:'FUTURE',regularMarketPrice:-10});
+  assert.equal(parseYahoo(f,{...item,kind:'future',symbol:'CL=F'},now).price,-10);
+});
 test('NAV parser does not execute JS or turn minimum purchase into a limit', () => {
   const value = parseFund(fundText,fundItem,now);
   assert.equal(value.nav,1.2);

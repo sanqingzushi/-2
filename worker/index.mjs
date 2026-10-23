@@ -1,4 +1,4 @@
-import catalog from '../data/catalog.json';
+import catalog from '../data/catalog.json' with { type: 'json' };
 import { collect } from '../lib/monitor.mjs';
 
 function json(data, status = 200, origin = '*') {
@@ -12,7 +12,7 @@ export default {
       const row = await env.DB.prepare('SELECT payload FROM snapshots WHERE id = 1').first();
       const previous = row ? JSON.parse(row.payload) : null;
       const snapshot = await collect(catalog, previous, { scheduler: 'cloudflare-cron', intervalSeconds: 60, budget: 48, concurrency: 4 });
-      await env.DB.prepare('INSERT INTO snapshots(id, payload, updated_at) VALUES (1, ?, ?) ON CONFLICT(id) DO UPDATE SET payload=excluded.payload, updated_at=excluded.updated_at').bind(JSON.stringify(snapshot), snapshot.generatedAt).run();
+      await env.DB.prepare('INSERT INTO snapshots(id, payload, updated_at, started_at) VALUES (1, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET payload=excluded.payload, updated_at=excluded.updated_at, started_at=excluded.started_at WHERE excluded.started_at >= snapshots.started_at').bind(JSON.stringify(snapshot), snapshot.generatedAt, snapshot.collectionStartedAt).run();
     })());
   },
   async fetch(request, env) {

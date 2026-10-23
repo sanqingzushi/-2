@@ -54,13 +54,23 @@ function renderDetails(changeChart = false) {
     + (fund && item.officialUrl ? detailRow('基金公司', link(item.officialUrl, '官方核查入口')) : '')
     + (item.note ? `<p>${escape(item.note)}</p>` : '')
     + (obs.error ? `<p class="amber">${escape(obs.error)}</p>` : '');
-  if (changeChart) {
+  if (changeChart || snapshot) {
     $('chartTitle').textContent = item.name;
-    if (item.tvSymbol) {
-      const url = new URL('https://s.tradingview.com/widgetembed/');
-      for (const [k,v] of Object.entries({ symbol:item.tvSymbol, interval:item.kind === 'future' ? '60' : 'D', theme:'dark', style:'1', timezone:'Asia/Shanghai', locale:'zh_CN', hidesidetoolbar:'1', symboledit:'0', saveimage:'0', hideideas:'1' })) url.searchParams.set(k,v);
-      $('chart').innerHTML = `<iframe title="${escape(item.name)} 第三方行情图表" src="${escape(url.href)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
-    } else $('chart').innerHTML = '<p class="empty">该标的未配置嵌入图表。<br>请核查来源页面，本站不绘制估算行情。</p>';
+    const points = (obs.history || []).filter(p => validNumber(p.time) && validNumber(p.value)).sort((a,b) => a.time - b.time);
+    if (points.length > 1) {
+      const start = points[0].time, end = points.at(-1).time;
+      const rawMin = Math.min(...points.map(p=>p.value)), rawMax = Math.max(...points.map(p=>p.value));
+      const pad = (rawMax - rawMin || Math.abs(rawMin) * .01 || 1) * .15;
+      const min = rawMin - pad, max = rawMax + pad;
+      const coords = points.map(p=>`${(64 + (p.time - start) / (end - start || 1) * 436).toFixed(2)},${(252 - (p.value - min) / (max - min) * 224).toFixed(2)}`).join(' ');
+      const day = t => new Date(t).toLocaleDateString('zh-CN',{ timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit' });
+      const grid = [0,.5,1].map(t=>`<line x1="64" x2="500" y1="${28+t*224}" y2="${28+t*224}" stroke="#26364b"/><text x="56" y="${32+t*224}" fill="#8d9eb6" text-anchor="end" font-size="10">${escape(format(max-t*(max-min)))}</text>`).join('');
+      $('chart').innerHTML = `<svg viewBox="0 0 520 290" role="img" aria-label="${escape(item.name)} ${points.length}条源记录历史曲线" style="width:100%;height:100%">${grid}<polyline points="${coords}" fill="none" stroke="#91bcff" stroke-width="2.5" stroke-linejoin="round"/><text x="64" y="278" fill="#8d9eb6" font-size="10">${escape(day(start))}</text><text x="500" y="278" fill="#8d9eb6" font-size="10" text-anchor="end">${escape(day(end))}</text></svg>`;
+      $('chartHint').textContent = fund ? `最近${points.length}条披露净值记录，末次净值日 ${obs.navDate}；连线仅辅助阅读。` : `近1月日线，共${points.length}条源记录，最后日线可能未完成。曲线连线不代表逐笔行情，报价时间另见核查卡片。`;
+    } else {
+      $('chart').innerHTML = '<p class="empty">尚无足够的源历史记录。<br>不插入估算点，不绘制模拟走势。</p>';
+      $('chartHint').textContent = '只绘制后台读取的源记录；不把网页时间当行情时间。';
+    }
     const external = safeUrl(obs.sourceUrl || item.sourceUrl);
     $('chartExternal').hidden = !external;
     if (external) $('chartExternal').href = external;
