@@ -20,7 +20,7 @@ function renderRows() {
     const obs = observations.get(item.id) || {};
     const fund = item.kind === 'fund';
     const price = fund ? obs.nav : obs.price;
-    const change = !fund && validNumber(obs.changePercent) ? `<span class="change ${obs.changePercent >= 0 ? 'green' : 'red'}">${obs.changePercent >= 0 ? '+' : ''}${obs.changePercent.toFixed(2)}%</span>` : '';
+    const change = !fund && obs.changeBasis === 'source_regular_market_daily' && validNumber(obs.changePercent) ? `<span class="change ${obs.changePercent >= 0 ? 'green' : 'red'}" title="数据源日涨跌幅">${obs.changePercent >= 0 ? '+' : ''}${obs.changePercent.toFixed(2)}%</span>` : '';
     const time = fund ? '净值披露日 ' + (obs.navDate || '未知') : '源报价 ' + timestamp(obs.asOf);
     const state = item.kind === 'etf' ? 'IOPV / 溢价：未验证' : fund ? '申购限额：渠道待核查' : states[obs.checkStatus] || '等待云端数据';
     const statusError = ['error','backoff','budget_deferred'].includes(obs.checkStatus) ? `<div class="rowstate">${escape(states[obs.checkStatus])}</div>` : '';

@@ -30,6 +30,14 @@ test('historical chart retains only source observations, and futures can be nega
   const f=payload(); Object.assign(f.chart.result[0].meta,{symbol:'CL=F',instrumentType:'FUTURE',regularMarketPrice:-10});
   assert.equal(parseYahoo(f,{...item,kind:'future',symbol:'CL=F'},now).price,-10);
 });
+test('monthly chart reference is never mistaken for previous-day close', () => {
+  const p=payload(); p.chart.result[0].meta.range='1mo';
+  assert.equal(parseYahoo(p,item,now).changePercent,null);
+  p.chart.result[0].meta.regularMarketChangePercent=-0.223;
+  assert.equal(parseYahoo(p,item,now).changePercent,-0.223);
+  assert.equal(parseYahoo(p,item,now).previousClose,null);
+  assert.equal(parseYahoo(p,item,now).changeBasis,'source_regular_market_daily');
+});
 test('NAV parser does not execute JS or turn minimum purchase into a limit', () => {
   const value = parseFund(fundText,fundItem,now);
   assert.equal(value.nav,1.2);
