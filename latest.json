@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "title": "石小鑫的全球指数与基金观测平台",
-  "collectionStartedAt": "2026-10-23T15:43:56.679Z",
-  "generatedAt": "2026-10-23T15:43:58.280Z",
+  "collectionStartedAt": "2026-10-23T15:47:46.521Z",
+  "generatedAt": "2026-10-23T15:47:47.947Z",
   "scheduler": {
     "name": "github-actions",
     "targetIntervalSeconds": 300,
@@ -10,12 +10,12 @@
     "navTargetIntervalSeconds": 3600
   },
   "statistics": {
-    "attempted": 58,
-    "succeeded": 58,
-    "failed": 0,
-    "newQuoteTimestamps": 20,
+    "attempted": 46,
+    "succeeded": 45,
+    "failed": 1,
+    "newQuoteTimestamps": 19,
     "newNavDates": 0,
-    "unchanged": 38
+    "unchanged": 26
   },
   "providerBackoffUntil": {},
   "policy": {
@@ -28,11 +28,12 @@
   "items": [
     {
       "id": "sp500",
-      "price": 7646.72,
+      "price": 7650.48,
       "currency": "USD",
-      "asOf": "2026-10-23T15:43:55.000Z",
-      "previousClose": 7706.03,
-      "changePercent": -0.7696570088618793,
+      "asOf": "2026-10-23T15:47:45.000Z",
+      "previousClose": null,
+      "changePercent": -0.169,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EGSPC/",
       "sourceSymbol": "^GSPC",
@@ -136,22 +137,23 @@
         },
         {
           "time": 1792762200000,
-          "value": 7646.72021484375
+          "value": 7650.47998046875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "nasdaq100",
-      "price": 29065.799,
+      "price": 29092.756,
       "currency": "USD",
-      "asOf": "2026-10-23T15:43:54.000Z",
-      "previousClose": 30470.29,
-      "changePercent": -4.609378512642981,
+      "asOf": "2026-10-23T15:47:45.000Z",
+      "previousClose": null,
+      "changePercent": 0.463,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5ENDX/",
       "sourceSymbol": "^NDX",
@@ -255,22 +257,23 @@
         },
         {
           "time": 1792762200000,
-          "value": 29065.798828125
+          "value": 29092.755859375
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "dow",
-      "price": 52319.14,
+      "price": 52342.32,
       "currency": "USD",
-      "asOf": "2026-10-23T15:43:56.000Z",
-      "previousClose": 51511.59,
-      "changePercent": 1.567705442600409,
+      "asOf": "2026-10-23T15:47:45.000Z",
+      "previousClose": null,
+      "changePercent": -0.994,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EDJI/",
       "sourceSymbol": "^DJI",
@@ -374,22 +377,23 @@
         },
         {
           "time": 1792762200000,
-          "value": 52319.140625
+          "value": 52342.3203125
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "nasdaq-composite",
-      "price": 26044.564,
+      "price": 26062.764,
       "currency": "USD",
-      "asOf": "2026-10-23T15:43:55.000Z",
-      "previousClose": 26936.04,
-      "changePercent": -3.309603044842535,
+      "asOf": "2026-10-23T15:47:40.000Z",
+      "previousClose": null,
+      "changePercent": 0.207,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EIXIC/",
       "sourceSymbol": "^IXIC",
@@ -493,22 +497,23 @@
         },
         {
           "time": 1792762200000,
-          "value": 26044.564453125
+          "value": 26062.763671875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "russell2000",
-      "price": 2776.402,
+      "price": 2775.5579,
       "currency": "USD",
-      "asOf": "2026-10-23T15:28:55.000Z",
-      "previousClose": 2838.66,
-      "changePercent": -2.193217926768254,
+      "asOf": "2026-10-23T15:32:45.000Z",
+      "previousClose": null,
+      "changePercent": -0.3042,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5ERUT/",
       "sourceSymbol": "^RUT",
@@ -612,22 +617,23 @@
         },
         {
           "time": 1792762200000,
-          "value": 2776.402099609375
+          "value": 2775.557861328125
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "vix",
-      "price": 18.94,
+      "price": 18.99,
       "currency": "USD",
-      "asOf": "2026-10-23T15:28:46.000Z",
-      "previousClose": 15.18,
-      "changePercent": 24.769433465085644,
+      "asOf": "2026-10-23T15:32:31.000Z",
+      "previousClose": null,
+      "changePercent": -0.21,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EVIX/",
       "sourceSymbol": "^VIX",
@@ -731,12 +737,12 @@
         },
         {
           "time": 1792738800000,
-          "value": 18.940000534057617
+          "value": 18.989999771118164
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
@@ -745,8 +751,9 @@
       "price": 3690.4753,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:24.000Z",
-      "previousClose": 3936.52,
-      "changePercent": -6.250309918405083,
+      "previousClose": null,
+      "changePercent": 0.8871,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000001.SS/",
       "sourceSymbol": "000001.SS",
@@ -830,8 +837,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -840,8 +847,9 @@
       "price": 11673.826,
       "currency": "CNY",
       "asOf": "2026-10-23T08:29:55.000Z",
-      "previousClose": 13636.07,
-      "changePercent": -14.39009920013612,
+      "previousClose": null,
+      "changePercent": 2.787,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/399001.SZ/",
       "sourceSymbol": "399001.SZ",
@@ -925,8 +933,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -935,8 +943,9 @@
       "price": 4105.3286,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:29.000Z",
-      "previousClose": 4036.2966,
-      "changePercent": 1.7102806567782958,
+      "previousClose": null,
+      "changePercent": 1.7103,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000300.SS/",
       "sourceSymbol": "000300.SS",
@@ -956,8 +965,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -966,8 +975,9 @@
       "price": 5012.436,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:29.000Z",
-      "previousClose": 4911.333,
-      "changePercent": 2.058565363008369,
+      "previousClose": null,
+      "changePercent": 2.059,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000510.SS/",
       "sourceSymbol": "000510.SS",
@@ -987,8 +997,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -997,8 +1007,9 @@
       "price": 2757.683,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:24.000Z",
-      "previousClose": 2724.807,
-      "changePercent": 1.2065441699173673,
+      "previousClose": null,
+      "changePercent": 1.207,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000016.SS/",
       "sourceSymbol": "000016.SS",
@@ -1018,8 +1029,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1028,8 +1039,9 @@
       "price": 6814.443,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:29.000Z",
-      "previousClose": 6655.25,
-      "changePercent": 2.391991285075701,
+      "previousClose": null,
+      "changePercent": 2.392,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000905.SS/",
       "sourceSymbol": "000905.SS",
@@ -1049,8 +1061,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1059,8 +1071,9 @@
       "price": 6734.547,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:29.000Z",
-      "previousClose": 6578.272,
-      "changePercent": 2.375623872044197,
+      "previousClose": null,
+      "changePercent": 2.376,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000852.SS/",
       "sourceSymbol": "000852.SS",
@@ -1080,8 +1093,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1090,8 +1103,9 @@
       "price": 2684.097,
       "currency": "CNY",
       "asOf": "2026-10-23T08:29:10.000Z",
-      "previousClose": 2576.901,
-      "changePercent": 4.159880414497885,
+      "previousClose": null,
+      "changePercent": 4.16,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/399006.SZ/",
       "sourceSymbol": "399006.SZ",
@@ -1111,8 +1125,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1121,8 +1135,9 @@
       "price": 1345.515,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:24.000Z",
-      "previousClose": 1305.873,
-      "changePercent": 3.035670390612255,
+      "previousClose": null,
+      "changePercent": 3.036,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/000688.SS/",
       "sourceSymbol": "000688.SS",
@@ -1142,8 +1157,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1168,8 +1183,9 @@
       "price": 23093.37,
       "currency": "HKD",
       "asOf": "2026-10-23T08:08:30.000Z",
-      "previousClose": 24834.12,
-      "changePercent": -7.009509497417266,
+      "previousClose": null,
+      "changePercent": 0.692,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EHSI/",
       "sourceSymbol": "^HSI",
@@ -1269,8 +1285,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1279,8 +1295,9 @@
       "price": 62693.16,
       "currency": "JPY",
       "asOf": "2026-10-23T06:45:03.000Z",
-      "previousClose": 65018.95,
-      "changePercent": -3.5770956005902743,
+      "previousClose": null,
+      "changePercent": -0.341,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EN225/",
       "sourceSymbol": "^N225",
@@ -1376,8 +1393,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1386,8 +1403,9 @@
       "price": 5550.3,
       "currency": "KRW",
       "asOf": "2026-10-23T11:05:40.000Z",
-      "previousClose": 7080.92,
-      "changePercent": -21.61611767962355,
+      "previousClose": null,
+      "changePercent": 0.299,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EKS11/",
       "sourceSymbol": "^KS11",
@@ -1475,8 +1493,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1485,8 +1503,9 @@
       "price": 46041.43,
       "currency": "TWD",
       "asOf": "2026-10-22T05:33:15.000Z",
-      "previousClose": 48157.29,
-      "changePercent": -4.393644243685635,
+      "previousClose": null,
+      "changePercent": -1.805,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5ETWII/",
       "sourceSymbol": "^TWII",
@@ -1578,18 +1597,19 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
     {
       "id": "ftse",
-      "price": 10671.31,
+      "price": 10670.59,
       "currency": "GBP",
-      "asOf": "2026-10-23T15:28:56.000Z",
-      "previousClose": 10705.3,
-      "changePercent": -0.3175062819351093,
+      "asOf": "2026-10-23T15:29:59.000Z",
+      "previousClose": null,
+      "changePercent": -0.508,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EFTSE/",
       "sourceSymbol": "^FTSE",
@@ -1693,22 +1713,23 @@
         },
         {
           "time": 1792738800000,
-          "value": 10671.3095703125
+          "value": 10670.58984375
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "dax",
-      "price": 25151.41,
+      "price": 25152.31,
       "currency": "EUR",
-      "asOf": "2026-10-23T15:28:55.000Z",
-      "previousClose": 25410.63,
-      "changePercent": -1.020124255085375,
+      "asOf": "2026-10-23T15:30:14.000Z",
+      "previousClose": null,
+      "changePercent": -0.865,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EGDAXI/",
       "sourceSymbol": "^GDAXI",
@@ -1812,22 +1833,23 @@
         },
         {
           "time": 1792738800000,
-          "value": 25151.41015625
+          "value": 25152.310546875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "cac",
-      "price": 7773.62,
+      "price": 7773.81,
       "currency": "EUR",
-      "asOf": "2026-10-23T15:28:45.000Z",
-      "previousClose": 8123.41,
-      "changePercent": -4.305950333665298,
+      "asOf": "2026-10-23T15:32:45.000Z",
+      "previousClose": null,
+      "changePercent": -0.479,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EFCHI/",
       "sourceSymbol": "^FCHI",
@@ -1931,12 +1953,12 @@
         },
         {
           "time": 1792738800000,
-          "value": 7773.6201171875
+          "value": 7773.81005859375
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
@@ -2053,19 +2075,20 @@
           "value": 6059.91015625
         }
       ],
-      "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "error",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
-      "sourceTimeAdvanced": true,
-      "error": null
+      "sourceTimeAdvanced": false,
+      "error": "币种不一致"
     },
     {
       "id": "asx",
       "price": 8795.2,
       "currency": "AUD",
       "asOf": "2026-10-23T05:53:44.000Z",
-      "previousClose": 8765.3,
-      "changePercent": 0.34111781684598164,
+      "previousClose": null,
+      "changePercent": 0.023,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EAXJO/",
       "sourceSymbol": "^AXJO",
@@ -2173,8 +2196,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -2183,8 +2206,9 @@
       "price": 73123.83,
       "currency": "INR",
       "asOf": "2026-10-23T10:02:36.000Z",
-      "previousClose": 74828.25,
-      "changePercent": -2.2777761072856784,
+      "previousClose": null,
+      "changePercent": -0.171,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EBSESN/",
       "sourceSymbol": "^BSESN",
@@ -2284,8 +2308,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -2299,11 +2323,12 @@
     },
     {
       "id": "es",
-      "price": 7693.25,
+      "price": 7686.5,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:54.000Z",
-      "previousClose": 7772.5,
-      "changePercent": -1.0196204567385014,
+      "asOf": "2026-10-23T15:37:45.000Z",
+      "previousClose": null,
+      "changePercent": -0.234,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/ES=F/",
       "sourceSymbol": "ES=F",
@@ -2407,22 +2432,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 7693.25
+          "value": 7686.5
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "nq",
-      "price": 29271.25,
+      "price": 29242.25,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:55.000Z",
-      "previousClose": 30764.75,
-      "changePercent": -4.85458194849625,
+      "asOf": "2026-10-23T15:37:45.000Z",
+      "previousClose": null,
+      "changePercent": 0.344,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/NQ=F/",
       "sourceSymbol": "NQ=F",
@@ -2526,22 +2552,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 29271.25
+          "value": 29242.25
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "ym",
-      "price": 52577,
+      "price": 52520,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:53.000Z",
-      "previousClose": 51873,
-      "changePercent": 1.3571607580051381,
+      "asOf": "2026-10-23T15:37:45.000Z",
+      "previousClose": null,
+      "changePercent": -1.033,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/YM=F/",
       "sourceSymbol": "YM=F",
@@ -2645,22 +2672,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 52577
+          "value": 52520
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "gold",
-      "price": 4010,
+      "price": 4008.5,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:53.000Z",
-      "previousClose": 4318.4,
-      "changePercent": -7.141533901444975,
+      "asOf": "2026-10-23T15:37:46.000Z",
+      "previousClose": null,
+      "changePercent": -1.278,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/GC=F/",
       "sourceSymbol": "GC=F",
@@ -2764,22 +2792,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 4010
+          "value": 4008.5
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "silver",
-      "price": 54.22,
+      "price": 54.16,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:55.000Z",
-      "previousClose": 64.382,
-      "changePercent": -15.783914758783524,
+      "asOf": "2026-10-23T15:37:46.000Z",
+      "previousClose": null,
+      "changePercent": -1.54,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/SI=F/",
       "sourceSymbol": "SI=F",
@@ -2883,22 +2912,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 54.220001220703125
+          "value": 54.15999984741211
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "wti",
-      "price": 102.54,
+      "price": 103.02,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:55.000Z",
-      "previousClose": 92.16,
-      "changePercent": 11.263020833333348,
+      "asOf": "2026-10-23T15:37:37.000Z",
+      "previousClose": null,
+      "changePercent": 3.569,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/CL=F/",
       "sourceSymbol": "CL=F",
@@ -3002,22 +3032,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 102.54000091552734
+          "value": 103.0199966430664
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "brent",
-      "price": 111.76,
+      "price": 112.04,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:55.000Z",
-      "previousClose": 103.08,
-      "changePercent": 8.420644159875824,
+      "asOf": "2026-10-23T15:37:44.000Z",
+      "previousClose": null,
+      "changePercent": 3.111,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/BZ=F/",
       "sourceSymbol": "BZ=F",
@@ -3121,22 +3152,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 111.76000213623047
+          "value": 112.04000091552734
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "copper",
-      "price": 6.518,
+      "price": 6.511,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:51.000Z",
-      "previousClose": 6.678,
-      "changePercent": -2.3959269242288084,
+      "asOf": "2026-10-23T15:37:46.000Z",
+      "previousClose": null,
+      "changePercent": 1.766,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/HG=F/",
       "sourceSymbol": "HG=F",
@@ -3240,22 +3272,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 6.518499851226807
+          "value": 6.511000156402588
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "gas",
-      "price": 3.033,
+      "price": 3.035,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:51.000Z",
-      "previousClose": 3.023,
-      "changePercent": 0.3307972213033361,
+      "asOf": "2026-10-23T15:37:44.000Z",
+      "previousClose": null,
+      "changePercent": -3.834,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/NG=F/",
       "sourceSymbol": "NG=F",
@@ -3359,22 +3392,23 @@
         },
         {
           "time": 1792728000000,
-          "value": 3.0329999923706055
+          "value": 3.0350000858306885
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "tnote",
-      "price": 106.09375,
+      "price": 106.0625,
       "currency": "USD",
-      "asOf": "2026-10-23T15:33:56.000Z",
-      "previousClose": 105.03125,
-      "changePercent": 1.01160368937816,
+      "asOf": "2026-10-23T15:37:41.000Z",
+      "previousClose": null,
+      "changePercent": -0.32305,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/ZN=F/",
       "sourceSymbol": "ZN=F",
@@ -3478,12 +3512,12 @@
         },
         {
           "time": 1792728000000,
-          "value": 106.09375
+          "value": 106.0625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
@@ -3532,8 +3566,9 @@
       "price": 2.243,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:00.000Z",
-      "previousClose": 2.334,
-      "changePercent": -3.898886032562132,
+      "previousClose": null,
+      "changePercent": -0.84,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/513100.SS/",
       "sourceSymbol": "513100.SS",
@@ -3617,8 +3652,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3627,8 +3662,9 @@
       "price": 2.69,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:00.000Z",
-      "previousClose": 2.827,
-      "changePercent": -4.846126636009906,
+      "previousClose": null,
+      "changePercent": -1.896,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/513300.SS/",
       "sourceSymbol": "513300.SS",
@@ -3712,8 +3748,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3722,8 +3758,9 @@
       "price": 1.668,
       "currency": "CNY",
       "asOf": "2026-10-23T07:04:18.000Z",
-      "previousClose": 1.728,
-      "changePercent": -3.472222222222221,
+      "previousClose": null,
+      "changePercent": -0.832,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/159941.SZ/",
       "sourceSymbol": "159941.SZ",
@@ -3807,8 +3844,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3817,8 +3854,9 @@
       "price": 2.431,
       "currency": "CNY",
       "asOf": "2026-10-23T07:04:51.000Z",
-      "previousClose": 2.581,
-      "changePercent": -5.811700891127469,
+      "previousClose": null,
+      "changePercent": -1.499,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/159632.SZ/",
       "sourceSymbol": "159632.SZ",
@@ -3902,8 +3940,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3912,8 +3950,9 @@
       "price": 2.605,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:00.000Z",
-      "previousClose": 2.723,
-      "changePercent": -4.333455747337489,
+      "previousClose": null,
+      "changePercent": -1.101,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/513500.SS/",
       "sourceSymbol": "513500.SS",
@@ -3997,8 +4036,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4007,8 +4046,9 @@
       "price": 1.959,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:02.000Z",
-      "previousClose": 2.044,
-      "changePercent": -4.158512720156549,
+      "previousClose": null,
+      "changePercent": -1.16,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/513650.SS/",
       "sourceSymbol": "513650.SS",
@@ -4092,8 +4132,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4102,8 +4142,9 @@
       "price": 1.972,
       "currency": "CNY",
       "asOf": "2026-10-23T07:04:27.000Z",
-      "previousClose": 2.052,
-      "changePercent": -3.898635477582846,
+      "previousClose": null,
+      "changePercent": -1.202,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/159655.SZ/",
       "sourceSymbol": "159655.SZ",
@@ -4187,8 +4228,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4197,8 +4238,9 @@
       "price": 2.038,
       "currency": "CNY",
       "asOf": "2026-10-23T07:04:30.000Z",
-      "previousClose": 2.105,
-      "changePercent": -3.182897862232792,
+      "previousClose": null,
+      "changePercent": -0.779,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/159612.SZ/",
       "sourceSymbol": "159612.SZ",
@@ -4282,8 +4324,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4292,8 +4334,9 @@
       "price": 1.426,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:01.000Z",
-      "previousClose": 1.388,
-      "changePercent": 2.737752161383278,
+      "previousClose": null,
+      "changePercent": -0.28,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/515450.SS/",
       "sourceSymbol": "515450.SS",
@@ -4377,8 +4420,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4387,8 +4430,9 @@
       "price": 1.201,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:00.000Z",
-      "previousClose": 1.182,
-      "changePercent": 1.6074450084602399,
+      "previousClose": null,
+      "changePercent": -0.083,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/512890.SS/",
       "sourceSymbol": "512890.SS",
@@ -4472,8 +4516,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4482,8 +4526,9 @@
       "price": 41.77,
       "currency": "CNY",
       "asOf": "2026-10-23T07:00:02.000Z",
-      "previousClose": 40.6,
-      "changePercent": 2.8817733990147865,
+      "previousClose": null,
+      "changePercent": -0.12,
+      "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/600036.SS/",
       "sourceSymbol": "600036.SS",
@@ -4567,8 +4612,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4830,7 +4875,7 @@
           "value": 1.0568
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -5094,7 +5139,7 @@
           "value": 1.5358
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -5358,7 +5403,7 @@
           "value": 1.9821
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -5622,7 +5667,7 @@
           "value": 2.2361
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -5886,7 +5931,7 @@
           "value": 2.8224
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -6150,7 +6195,7 @@
           "value": 1.6894
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -6414,7 +6459,7 @@
           "value": 1.6728
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -6678,7 +6723,7 @@
           "value": 2.1932
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -6942,7 +6987,7 @@
           "value": 2.2296
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -7206,7 +7251,7 @@
           "value": 1.7076
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -7470,7 +7515,7 @@
           "value": 2.2295
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
@@ -7734,7 +7779,7 @@
           "value": 3.1208
         }
       ],
-      "checkStatus": "ok",
+      "checkStatus": "not_due",
       "lastAttemptAt": "2026-10-23T15:43:56.679Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
