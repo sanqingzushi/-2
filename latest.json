@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "title": "石小鑫的全球指数与基金观测平台",
-  "collectionStartedAt": "2026-10-23T15:47:46.521Z",
-  "generatedAt": "2026-10-23T15:47:47.947Z",
+  "collectionStartedAt": "2026-10-23T19:32:04.438Z",
+  "generatedAt": "2026-10-23T19:32:12.777Z",
   "scheduler": {
     "name": "github-actions",
     "targetIntervalSeconds": 300,
@@ -10,12 +10,12 @@
     "navTargetIntervalSeconds": 3600
   },
   "statistics": {
-    "attempted": 46,
-    "succeeded": 45,
+    "attempted": 58,
+    "succeeded": 57,
     "failed": 1,
     "newQuoteTimestamps": 19,
     "newNavDates": 0,
-    "unchanged": 26
+    "unchanged": 38
   },
   "providerBackoffUntil": {},
   "policy": {
@@ -28,11 +28,11 @@
   "items": [
     {
       "id": "sp500",
-      "price": 7650.48,
+      "price": 7628.58,
       "currency": "USD",
-      "asOf": "2026-10-23T15:47:45.000Z",
+      "asOf": "2026-10-23T19:32:03.000Z",
       "previousClose": null,
-      "changePercent": -0.169,
+      "changePercent": -0.455,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EGSPC/",
@@ -137,22 +137,22 @@
         },
         {
           "time": 1792762200000,
-          "value": 7650.47998046875
+          "value": 7628.580078125
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "nasdaq100",
-      "price": 29092.756,
+      "price": 28977.854,
       "currency": "USD",
-      "asOf": "2026-10-23T15:47:45.000Z",
+      "asOf": "2026-10-23T19:32:04.000Z",
       "previousClose": null,
-      "changePercent": 0.463,
+      "changePercent": 0.066,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5ENDX/",
@@ -257,22 +257,22 @@
         },
         {
           "time": 1792762200000,
-          "value": 29092.755859375
+          "value": 28977.853515625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "dow",
-      "price": 52342.32,
+      "price": 52269.41,
       "currency": "USD",
-      "asOf": "2026-10-23T15:47:45.000Z",
+      "asOf": "2026-10-23T19:32:03.000Z",
       "previousClose": null,
-      "changePercent": -0.994,
+      "changePercent": -1.132,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EDJI/",
@@ -377,22 +377,22 @@
         },
         {
           "time": 1792762200000,
-          "value": 52342.3203125
+          "value": 52269.41015625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "nasdaq-composite",
-      "price": 26062.764,
+      "price": 25973.973,
       "currency": "USD",
-      "asOf": "2026-10-23T15:47:40.000Z",
+      "asOf": "2026-10-23T19:32:01.000Z",
       "previousClose": null,
-      "changePercent": 0.207,
+      "changePercent": -0.134,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EIXIC/",
@@ -497,22 +497,22 @@
         },
         {
           "time": 1792762200000,
-          "value": 26062.763671875
+          "value": 25973.97265625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "russell2000",
-      "price": 2775.5579,
+      "price": 2775.5664,
       "currency": "USD",
-      "asOf": "2026-10-23T15:32:45.000Z",
+      "asOf": "2026-10-23T19:17:00.000Z",
       "previousClose": null,
-      "changePercent": -0.3042,
+      "changePercent": -0.3039,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5ERUT/",
@@ -617,22 +617,22 @@
         },
         {
           "time": 1792762200000,
-          "value": 2775.557861328125
+          "value": 2775.56640625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "vix",
-      "price": 18.99,
+      "price": 19.64,
       "currency": "USD",
-      "asOf": "2026-10-23T15:32:31.000Z",
+      "asOf": "2026-10-23T19:17:01.000Z",
       "previousClose": null,
-      "changePercent": -0.21,
+      "changePercent": 3.205,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EVIX/",
@@ -737,12 +737,12 @@
         },
         {
           "time": 1792738800000,
-          "value": 18.989999771118164
+          "value": 19.639999389648438
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
@@ -830,15 +830,11 @@
         {
           "time": 1792632600000,
           "value": 3658.02587890625
-        },
-        {
-          "time": 1792719000000,
-          "value": 3690.475341796875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -926,15 +922,11 @@
         {
           "time": 1792632600000,
           "value": 11357.3203125
-        },
-        {
-          "time": 1792719000000,
-          "value": 11673.826171875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -965,8 +957,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -997,8 +989,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1029,8 +1021,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1061,8 +1053,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1093,8 +1085,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1125,8 +1117,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1157,8 +1149,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1278,15 +1270,11 @@
         {
           "time": 1792632600000,
           "value": 22934.6796875
-        },
-        {
-          "time": 1792719000000,
-          "value": 23093.369140625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1393,8 +1381,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1493,8 +1481,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -1597,18 +1585,18 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
     {
       "id": "ftse",
-      "price": 10670.59,
+      "price": 10690.36,
       "currency": "GBP",
-      "asOf": "2026-10-23T15:29:59.000Z",
+      "asOf": "2026-10-23T15:40:30.000Z",
       "previousClose": null,
-      "changePercent": -0.508,
+      "changePercent": -0.323,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EFTSE/",
@@ -1713,22 +1701,22 @@
         },
         {
           "time": 1792738800000,
-          "value": 10670.58984375
+          "value": 10690.3603515625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "dax",
-      "price": 25152.31,
+      "price": 25181.65,
       "currency": "EUR",
-      "asOf": "2026-10-23T15:30:14.000Z",
+      "asOf": "2026-10-23T16:00:00.000Z",
       "previousClose": null,
-      "changePercent": -0.865,
+      "changePercent": -0.749,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EGDAXI/",
@@ -1833,22 +1821,22 @@
         },
         {
           "time": 1792738800000,
-          "value": 25152.310546875
+          "value": 25181.650390625
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "cac",
-      "price": 7773.81,
+      "price": 7782.82,
       "currency": "EUR",
-      "asOf": "2026-10-23T15:32:45.000Z",
+      "asOf": "2026-10-23T16:05:02.000Z",
       "previousClose": null,
-      "changePercent": -0.479,
+      "changePercent": -0.364,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/%5EFCHI/",
@@ -1953,12 +1941,12 @@
         },
         {
           "time": 1792738800000,
-          "value": 7773.81005859375
+          "value": 7782.81982421875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
@@ -2076,7 +2064,7 @@
         }
       ],
       "checkStatus": "error",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
       "lastSuccessAt": "2026-10-23T15:43:56.679Z",
       "sourceTimeAdvanced": false,
       "error": "币种不一致"
@@ -2196,8 +2184,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -2301,15 +2289,11 @@
         {
           "time": 1792640700000,
           "value": 73249.390625
-        },
-        {
-          "time": 1792727100000,
-          "value": 73123.828125
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -2323,11 +2307,11 @@
     },
     {
       "id": "es",
-      "price": 7686.5,
+      "price": 7667.25,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:45.000Z",
+      "asOf": "2026-10-23T19:22:02.000Z",
       "previousClose": null,
-      "changePercent": -0.234,
+      "changePercent": -0.483,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/ES=F/",
@@ -2432,22 +2416,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 7686.5
+          "value": 7667.25
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "nq",
-      "price": 29242.25,
+      "price": 29144.75,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:45.000Z",
+      "asOf": "2026-10-23T19:22:03.000Z",
       "previousClose": null,
-      "changePercent": 0.344,
+      "changePercent": 0.009,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/NQ=F/",
@@ -2552,22 +2536,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 29242.25
+          "value": 29144.75
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "ym",
-      "price": 52520,
+      "price": 52461,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:45.000Z",
+      "asOf": "2026-10-23T19:21:59.000Z",
       "previousClose": null,
-      "changePercent": -1.033,
+      "changePercent": -1.144,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/YM=F/",
@@ -2672,22 +2656,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 52520
+          "value": 52461
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "gold",
-      "price": 4008.5,
+      "price": 4009.7,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:46.000Z",
+      "asOf": "2026-10-23T19:22:00.000Z",
       "previousClose": null,
-      "changePercent": -1.278,
+      "changePercent": -1.249,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/GC=F/",
@@ -2792,22 +2776,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 4008.5
+          "value": 4009.699951171875
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "silver",
-      "price": 54.16,
+      "price": 54.065,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:46.000Z",
+      "asOf": "2026-10-23T19:21:00.000Z",
       "previousClose": null,
-      "changePercent": -1.54,
+      "changePercent": -1.713,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/SI=F/",
@@ -2912,22 +2896,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 54.15999984741211
+          "value": 54.064998626708984
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "wti",
-      "price": 103.02,
+      "price": 103.49,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:37.000Z",
+      "asOf": "2026-10-23T19:22:02.000Z",
       "previousClose": null,
-      "changePercent": 3.569,
+      "changePercent": 4.041,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/CL=F/",
@@ -3032,22 +3016,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 103.0199966430664
+          "value": 103.48999786376953
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "brent",
-      "price": 112.04,
+      "price": 111.86,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:44.000Z",
+      "asOf": "2026-10-23T19:20:02.000Z",
       "previousClose": null,
-      "changePercent": 3.111,
+      "changePercent": 2.945,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/BZ=F/",
@@ -3152,22 +3136,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 112.04000091552734
+          "value": 111.86000061035156
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "copper",
-      "price": 6.511,
+      "price": 6.501,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:46.000Z",
+      "asOf": "2026-10-23T19:21:40.000Z",
       "previousClose": null,
-      "changePercent": 1.766,
+      "changePercent": 1.61,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/HG=F/",
@@ -3272,22 +3256,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 6.511000156402588
+          "value": 6.500999927520752
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "gas",
-      "price": 3.035,
+      "price": 3.051,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:44.000Z",
+      "asOf": "2026-10-23T19:21:57.000Z",
       "previousClose": null,
-      "changePercent": -3.834,
+      "changePercent": -3.327,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/NG=F/",
@@ -3392,22 +3376,22 @@
         },
         {
           "time": 1792728000000,
-          "value": 3.0350000858306885
+          "value": 3.0510001182556152
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
     {
       "id": "tnote",
-      "price": 106.0625,
+      "price": 106.125,
       "currency": "USD",
-      "asOf": "2026-10-23T15:37:41.000Z",
+      "asOf": "2026-10-23T19:22:02.000Z",
       "previousClose": null,
-      "changePercent": -0.32305,
+      "changePercent": -0.26432,
       "changeBasis": "source_regular_market_daily",
       "source": "Yahoo Finance 公共图表接口（非官方交易所源）",
       "sourceUrl": "https://finance.yahoo.com/quote/ZN=F/",
@@ -3512,12 +3496,12 @@
         },
         {
           "time": 1792728000000,
-          "value": 106.0625
+          "value": 106.125
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": true,
       "error": null
     },
@@ -3645,15 +3629,11 @@
         {
           "time": 1792632600000,
           "value": 2.26200008392334
-        },
-        {
-          "time": 1792719000000,
-          "value": 2.243000030517578
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3741,15 +3721,11 @@
         {
           "time": 1792632600000,
           "value": 2.742000102996826
-        },
-        {
-          "time": 1792719000000,
-          "value": 2.690000057220459
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3837,15 +3813,11 @@
         {
           "time": 1792632600000,
           "value": 1.6820000410079956
-        },
-        {
-          "time": 1792719000000,
-          "value": 1.6679999828338623
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -3933,15 +3905,11 @@
         {
           "time": 1792632600000,
           "value": 2.4679999351501465
-        },
-        {
-          "time": 1792719000000,
-          "value": 2.430999994277954
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4029,15 +3997,11 @@
         {
           "time": 1792632600000,
           "value": 2.634000062942505
-        },
-        {
-          "time": 1792719000000,
-          "value": 2.6050000190734863
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4125,15 +4089,11 @@
         {
           "time": 1792632600000,
           "value": 1.9819999933242798
-        },
-        {
-          "time": 1792719000000,
-          "value": 1.9589999914169312
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4221,15 +4181,11 @@
         {
           "time": 1792632600000,
           "value": 1.996000051498413
-        },
-        {
-          "time": 1792719000000,
-          "value": 1.972000002861023
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4317,15 +4273,11 @@
         {
           "time": 1792632600000,
           "value": 2.053999900817871
-        },
-        {
-          "time": 1792719000000,
-          "value": 2.0380001068115234
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4413,15 +4365,11 @@
         {
           "time": 1792632600000,
           "value": 1.4299999475479126
-        },
-        {
-          "time": 1792719000000,
-          "value": 1.4259999990463257
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4509,15 +4457,11 @@
         {
           "time": 1792632600000,
           "value": 1.2020000219345093
-        },
-        {
-          "time": 1792719000000,
-          "value": 1.2009999752044678
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4612,8 +4556,8 @@
         }
       ],
       "checkStatus": "ok",
-      "lastAttemptAt": "2026-10-23T15:47:46.521Z",
-      "lastSuccessAt": "2026-10-23T15:47:46.521Z",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -4875,9 +4819,9 @@
           "value": 1.0568
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -5139,9 +5083,9 @@
           "value": 1.5358
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -5403,9 +5347,9 @@
           "value": 1.9821
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -5667,9 +5611,9 @@
           "value": 2.2361
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -5931,9 +5875,9 @@
           "value": 2.8224
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -6195,9 +6139,9 @@
           "value": 1.6894
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -6459,9 +6403,9 @@
           "value": 1.6728
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -6723,9 +6667,9 @@
           "value": 2.1932
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -6987,9 +6931,9 @@
           "value": 2.2296
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -7251,9 +7195,9 @@
           "value": 1.7076
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -7515,9 +7459,9 @@
           "value": 2.2295
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     },
@@ -7779,9 +7723,9 @@
           "value": 3.1208
         }
       ],
-      "checkStatus": "not_due",
-      "lastAttemptAt": "2026-10-23T15:43:56.679Z",
-      "lastSuccessAt": "2026-10-23T15:43:56.679Z",
+      "checkStatus": "ok",
+      "lastAttemptAt": "2026-10-23T19:32:04.438Z",
+      "lastSuccessAt": "2026-10-23T19:32:04.438Z",
       "sourceTimeAdvanced": false,
       "error": null
     }
