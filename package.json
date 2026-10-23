@@ -1,0 +1,10 @@
+{
+  "name": "shixiaoxin-atlas-market-watch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "collect": "node scripts/collect.mjs",
+    "check": "node --check app.js && node --check lib/monitor.mjs && node --check worker/index.mjs"
+  }
+}

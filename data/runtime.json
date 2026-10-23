@@ -1,0 +1,5 @@
+{
+  "snapshotUrl": "https://raw.githubusercontent.com/sanqingzushi/-2/monitor-data/latest.json",
+  "scheduler": "github-actions",
+  "nominalIntervalSeconds": 300
+}

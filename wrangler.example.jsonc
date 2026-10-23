@@ -1,0 +1,11 @@
+{
+  "name": "shixiaoxin-market-monitor",
+  "main": "worker/index.mjs",
+  "compatibility_date": "2026-10-01",
+  "triggers": { "crons": ["* * * * *"] },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "shixiaoxin-market-monitor",
+    "database_id": "REPLACE_WITH_ACTUAL_D1_DATABASE_ID"
+  }]
+}

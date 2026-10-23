@@ -1,0 +1,35 @@
+name: Cloud market checks
+on:
+  workflow_dispatch:
+  schedule:
+    # Nominal five-minute cadence. GitHub may delay or drop scheduled runs.
+    - cron: '2-59/5 * * * *'
+  push:
+    branches: [main]
+    paths: ['lib/**', 'scripts/**', 'tests/**', 'data/catalog.json', '.github/workflows/monitor.yml']
+permissions:
+  contents: write
+concurrency:
+  group: market-snapshot
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm test
+      - name: Read previous cloud snapshot
+        run: |
+          if git fetch origin monitor-data --depth=1; then
+            git show origin/monitor-data:latest.json > data/previous.json
+          fi
+      - name: Collect source observations
+        env:
+          PREVIOUS_SNAPSHOT: data/previous.json
+        run: node scripts/collect.mjs
+      - name: Publish data branch without rebuilding Pages
+        run: bash scripts/publish-data.sh

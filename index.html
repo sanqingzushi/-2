@@ -1,64 +1,52 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1020">
-<title>Atlas Market Watch｜全球投资监测台</title>
-<style>
-:root{color-scheme:dark;--bg:#0b1020;--panel:#121b2d;--panel2:#17243a;--line:#283852;--txt:#edf3ff;--muted:#91a3bf;--blue:#82b6ff;--green:#52d6a0;--amber:#ffcb75;--red:#ff7883}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#1c3152 0,transparent 35%),var(--bg);color:var(--txt);font:14px/1.5 Inter,"Microsoft YaHei",system-ui,sans-serif}.wrap{max-width:1240px;margin:auto;padding:24px 18px 40px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;flex-wrap:wrap}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--blue);font-weight:800}.title{font-size:29px;font-weight:800;margin:5px 0}.desc{color:var(--muted);max-width:780px}.pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.pill{font-size:11px;padding:5px 9px;border:1px solid var(--line);border-radius:30px;color:var(--muted);background:#111a2b}.pill.green{color:var(--green);border-color:#245743}.pill.amber{color:var(--amber);border-color:#624b28}.card{background:linear-gradient(150deg,#152139,#101827);border:1px solid var(--line);border-radius:15px;padding:15px;min-width:0}.statusbox{min-width:210px}.muted{color:var(--muted)}.tiny{font-size:11px;color:var(--muted)}.big{font-size:20px;font-weight:800;margin:7px 0}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}.metric{min-height:114px}.metric .head{font-size:12px;color:var(--muted)}.metric .big{font-size:18px}.section{margin-top:25px}.secthead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.secthead h2{font-size:17px;margin:0}.tag{font-size:10px;color:var(--blue);background:#1d2e49;border-radius:6px;padding:4px 7px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 16px}.tabs button{background:#111a2b;color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:8px 12px;cursor:pointer}.tabs button.active{background:#203a5d;color:white;border-color:#4c7eb9}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.mini h3{margin:0 0 5px;font-size:14px}.mini p{margin:0;color:var(--muted);font-size:12px}.chart{height:310px;overflow:hidden;border:1px solid var(--line);border-radius:13px;background:#0e1727}.chart iframe{width:100%;height:100%;border:0}.twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:540px;background:var(--panel)}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);font-size:12px}th{background:#101827;color:var(--muted);font-weight:600}td{color:#dbe6f8}.red{color:var(--red)}.ambertxt{color:var(--amber)}.greentxt{color:var(--green)}.list{display:grid;gap:8px}.li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}.li:last-child{border:0}.li b{display:block;font-size:12px}.li span{display:block;font-size:11px;color:var(--muted)}.notice{padding:14px 15px;border:1px solid #624b28;background:#211d17;border-radius:12px;color:#f6d9a6}.notice strong{color:#ffcf78}.foot{margin-top:26px;border-top:1px solid var(--line);padding-top:15px;font-size:11px;color:var(--muted)}.hide{display:none}.btn{border:1px solid #3a5274;border-radius:8px;background:#1a2b44;color:#e9f1ff;padding:8px 11px;cursor:pointer}.link{color:#9dc6ff;text-decoration:none}.link:hover{text-decoration:underline}
-@media(max-width:800px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3,.twocol{grid-template-columns:1fr}.title{font-size:23px}.wrap{padding:17px 12px 28px}.chart{height:280px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="石小鑫的全球指数、期货与场内外基金监测台。区分网页请求、后台采集与源报价时间，展示可核查的数据状态。">
+  <meta name="application-name" content="石小鑫观测平台">
+  <meta name="apple-mobile-web-app-title" content="石小鑫观测平台">
+  <title>石小鑫的全球指数与基金观测平台</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body><main class="wrap">
-<header class="top">
-<div><div class="eyebrow">ATLAS · GLOBAL MARKET WATCH</div><div class="title">全球指数与基金监测台</div><div class="desc">道琼斯、标普、纳指、A股红利低波、全球主要指数与期货。监测风险与产品可执行性，避免高溢价追买。</div><div class="pills"><span class="pill green">云端网页原型</span><span class="pill amber">行情按数据源更新，不保证逐笔实时</span><span class="pill">时区：北京时间</span></div></div>
-<div class="card statusbox"><div class="tiny">页面状态</div><div class="big greentxt">已加载</div><div class="tiny">本次打开：<span id="loadedAt">--</span></div><div class="tiny">页面检查：<span id="checkedAt">--</span></div><div style="margin-top:9px"><button class="btn" id="refreshBtn">刷新页面状态</button></div></div>
-</header>
-<div class="grid4">
-<div class="card metric"><div class="head">美国核心指数</div><div class="big">道指 · 标普500 · 纳指100</div><div class="tiny">DJIA / SPX / NDX / IXIC</div></div>
-<div class="card metric"><div class="head">中国宽基与红利</div><div class="big">沪深300 · A500 · 红利低波</div><div class="tiny">中证500/1000 · 创业板 · 科创50</div></div>
-<div class="card metric"><div class="head">场内ETF溢价阈值</div><div class="big"><span class="ambertxt">2%</span> / <span class="red">5%</span> / <span class="red">10%</span></div><div class="tiny">谨慎 / 高风险 / 避免追高</div></div>
-<div class="card metric"><div class="head">场外基金核查</div><div class="big">限购 · 费率 · 开放状态</div><div class="tiny">官方公告与实际销售渠道分开核对</div></div>
-</div>
-<nav class="tabs"><button class="active" data-filter="all">全部</button><button data-filter="us">美国指数</button><button data-filter="cn">中国市场</button><button data-filter="global">港股/全球</button><button data-filter="futures">期货/商品</button><button data-filter="funds">基金风险</button></nav>
-<section class="section" data-market="us"><div class="secthead"><h2>美国主要指数</h2><span class="tag">TradingView 嵌入行情</span></div><div class="grid3">
-<div class="card mini"><h3>标普500 · SPX</h3><p>美国大型股基准；核心长期观察指数。</p><div class="chart" style="margin-top:12px"><iframe title="S&P 500 chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_spx&symbol=SP%3ASPX&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-<div class="card mini"><h3>纳斯达克100 · NDX</h3><p>大型非金融成长企业；注意科技股集中风险。</p><div class="chart" style="margin-top:12px"><iframe title="Nasdaq 100 chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_ndx&symbol=NASDAQ%3ANDX&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-<div class="card mini"><h3>道琼斯工业指数 · DJI</h3><p>美国大型蓝筹；可用于对照成长股与价值股风格。</p><div class="chart" style="margin-top:12px"><iframe title="Dow Jones chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_dji&symbol=DJ%3ADJI&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-</div><div class="grid3" style="margin-top:12px">
-<div class="card mini"><h3>纳斯达克综合指数</h3><p>覆盖纳斯达克上市公司，范围不同于纳指100。</p><div class="chart" style="margin-top:12px"><iframe title="Nasdaq Composite chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_ixic&symbol=NASDAQ%3AIXIC&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-<div class="card mini"><h3>罗素2000</h3><p>美国小盘股风险偏好观察指标。</p><div class="chart" style="margin-top:12px"><iframe title="Russell 2000 chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_rut&symbol=TVC%3ARUT&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-<div class="card mini"><h3>VIX 波动率</h3><p>市场风险情绪参考，不是独立买入信号。</p><div class="chart" style="margin-top:12px"><iframe title="VIX chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_vix&symbol=CBOE%3AVIX&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-</div></section>
-<section class="section" data-market="cn"><div class="secthead"><h2>中国市场与红利策略</h2><span class="tag">场内 + 场外</span></div><div class="grid3">
-<div class="card mini"><h3>宽基指数</h3><p>沪深300、中证A500、上证50、中证500/1000/2000、创业板与科创50。后续需接入合规行情接口以展示结构化数据。</p></div>
-<div class="card mini"><h3>红利 / 红利低波</h3><p>重点核查南方红利低波联接A（008163）及同类基金的估值、净值、分红、申购限额与费率。</p></div>
-<div class="card mini"><h3>个股与行业</h3><p>招商银行（600036）、电池主题基金与其他自选。监测估值、行业集中度和风险，不自动生成买单。</p></div>
-</div></section>
-<section class="section" data-market="global"><div class="secthead"><h2>港股与全球指数</h2><span class="tag">可投资性筛选</span></div><div class="grid3">
-<div class="card mini"><h3>香港</h3><p>恒生指数、恒生科技指数及相关ETF/QDII；区分港股交易时段与内地基金净值时点。</p></div>
-<div class="card mini"><h3>全球</h3><p>MSCI中国、新兴市场及有实际产品承接的主要国际指数。</p></div>
-<div class="card mini"><h3>渠道比较</h3><p>比较基金直销、支付宝等代销渠道、A/C/D/I份额、限购、费用与实际可下单状态。</p></div>
-</div></section>
-<section class="section" data-market="futures"><div class="secthead"><h2>重要期货与商品</h2><span class="tag">风险监测，不是交易指令</span></div><div class="grid3">
-<div class="card mini"><h3>美股股指期货</h3><p>标普 ES、纳指 NQ、道指 YM 及微型合约。关注交易时段、合约月份、基差和波动率。</p><div class="chart" style="margin-top:12px"><iframe title="E-mini S&P futures chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_es&symbol=CME_MINI%3AES1%21&interval=60&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-<div class="card mini"><h3>黄金 / 原油</h3><p>重要宏观风险与通胀观察；期货价格与现货、基金收益不能混为一谈。</p><div class="chart" style="margin-top:12px"><iframe title="Gold chart" loading="lazy" src="https://s.tradingview.com/widgetembed/?frameElementId=tv_gold&symbol=TVC%3AGOLD&interval=D&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=0b1020&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FShanghai&withdateranges=1&hideideas=1&locale=zh_CN"></iframe></div></div>
-<div class="card mini"><h3>铜 / 中国金融期货</h3><p>关注铜等工业品与中金所股指、国债期货。杠杆合约存在保证金追加和高亏损风险。</p></div>
-</div></section>
-<section class="section" data-market="funds"><div class="secthead"><h2>场内ETF溢价与场外基金核查规则</h2><span class="tag">不填造数据</span></div><div class="twocol">
-<div class="tablewrap"><table><thead><tr><th>溢价率</th><th>风险等级</th><th>处理</th></tr></thead><tbody><tr><td class="ambertxt">&gt; 2%</td><td>谨慎</td><td>核对IOPV、净值时滞和流动性</td></tr><tr><td class="red">&gt; 5%</td><td>高风险</td><td>不作为优先买入候选</td></tr><tr><td class="red">&gt; 10%</td><td>极高风险</td><td>明确警告避免追高</td></tr><tr><td class="greentxt">≤ 1% / 折价</td><td>继续评估</td><td>低溢价不等于低估</td></tr></tbody></table></div>
-<div class="card"><div class="tiny">场外基金必须核查</div><div class="list"><div class="li"><div><b>申购限额</b><span>基金公司公告、代销、直销分开</span></div><span class="ambertxt">待数据接入</span></div><div class="li"><div><b>费用与跟踪</b><span>管理费、托管费、销售服务费、跟踪误差</span></div><span>待核查</span></div><div class="li"><div><b>实际可买性</b><span>开放状态、最低金额、渠道页面</span></div><span>待核查</span></div></div></div></div></section>
-<section class="section"><div class="secthead"><h2>个人观察清单</h2><span class="tag">观察不等于买入</span></div><div class="tablewrap"><table><thead><tr><th>标的 / 代码</th><th>类型</th><th>重点核查</th><th>数据状态</th></tr></thead><tbody>
-<tr><td>纳指100及相关产品</td><td>ETF / QDII / 联接</td><td>估值、溢价、限购、费用</td><td class="ambertxt">等待可靠数据源</td></tr>
-<tr><td>标普500 / 等权重 / 道指</td><td>ETF / QDII / 联接</td><td>长期成本、渠道额度、估值</td><td class="ambertxt">等待可靠数据源</td></tr>
-<tr><td>008163 南方红利低波联接A</td><td>场外基金</td><td>净值、分红、回撤、限购</td><td class="ambertxt">待更新</td></tr>
-<tr><td>600036 招商银行</td><td>A股个股</td><td>估值、盈利质量、分红</td><td class="ambertxt">待更新</td></tr>
-<tr><td>159147 南方中证电池主题ETF</td><td>场内行业ETF</td><td>估值周期、溢价、行业风险</td><td class="ambertxt">观察</td></tr>
-</tbody></table></div></section>
-<div class="notice" style="margin-top:22px"><strong>数据诚实原则：</strong>行情图表由第三方嵌入组件提供，可能延迟且覆盖因品种而异。本页面每60秒更新时间戳与检查状态；组件报价按提供商自身频率更新。ETF溢价、IOPV、基金净值、申购限额和期货行情在未接入并核实结构化数据源前均不伪造为实时数据。</div>
-<footer class="foot">Atlas Market Watch · 个人投资研究辅助 · 公开页面不保存私人账户信息或API密钥。数据仅用于研究，不构成收益保证或交易指令。<br>数据状态：<span id="dataStatus">第三方图表嵌入；结构化行情接口未连接</span> · <a class="link" href="https://www.tradingview.com/widget-docs/" target="_blank" rel="noopener">行情组件说明</a></footer>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div class="brand"><div class="eyebrow">石小鑫 / ATLAS MARKET WATCH</div><h1>石小鑫的全球指数与基金观测平台</h1><p class="desc">看全球市场，核对基金数据。每个数字，都带上自己的时间。</p><div class="pills"><span class="pill">公开云端页面</span><span class="pill amber">源报价时延未知，不标为实时</span><span class="pill">北京时间</span></div></div>
+    <button class="btn primary" id="refreshBtn">检查云端快照</button>
+  </header>
+  <section class="statusbar" aria-label="更新与采集状态" aria-live="polite">
+    <div><span class="label">页面请求时间</span><strong id="pageCheck">正在请求…</strong></div>
+    <div><span class="label">后台快照生成时间</span><strong id="cloudCheck">尚未取得</strong></div>
+    <div><span class="label">后台调度目标</span><strong id="cadence">待读取配置</strong></div>
+    <div><span class="label">数据状态</span><strong id="cloudState">等待首个快照</strong></div>
+  </section>
+  <div class="notice" id="healthNote">页面每60秒请求一次云端快照。后台采集与源报价各有独立时间，页面刷新不代表行情更新。</div>
+  <section class="metrics" aria-label="本轮后台采集统计">
+    <div class="metric"><span>观察标的</span><b id="totalCount">—</b><small>全球指数 · 期货 · 基金</small></div>
+    <div class="metric"><span>本轮源请求成功 / 请求数</span><b id="requestCount">—</b><small>成功访问不等于新报价</small></div>
+    <div class="metric"><span>本轮报价时间推进</span><b id="advancedCount">—</b><small>按源时间与上一快照比较</small></div>
+    <div class="metric"><span>IOPV / 渠道申购限额</span><b class="smallmetric">尚未验证</b><small>空值保留，不生成买入信号</small></div>
+  </section>
+  <div class="toolbar"><nav id="tabs" aria-label="市场分类">
+    <button class="active" data-group="all" aria-pressed="true">全部</button><button data-group="us" aria-pressed="false">美国指数</button><button data-group="cn" aria-pressed="false">中国市场</button><button data-group="global" aria-pressed="false">全球指数</button><button data-group="futures" aria-pressed="false">期货</button><button data-group="etf" aria-pressed="false">场内基金</button><button data-group="otc" aria-pressed="false">场外基金</button><button data-group="saved" aria-pressed="false">关注</button>
+  </nav><input type="search" id="search" aria-label="搜索名称或代码" placeholder="搜索名称、代码…"></div>
+  <div class="workspace">
+    <section class="panel listpanel" aria-labelledby="listTitle">
+      <div class="panelhead"><h2 id="listTitle">全部观察标的</h2><span id="visibleCount" class="muted"></span></div>
+      <div id="marketRows" class="marketrows"><p class="empty">正在读取标的目录…</p></div>
+    </section>
+    <aside class="sidebar">
+      <section class="panel chartpanel"><div class="panelhead"><h2 id="chartTitle">标普500</h2><span class="badge">独立图表源</span></div><div class="chart" id="chart"></div><p class="hint">TradingView 图表自行更新，可能延迟或不支持该品种；图表数据不会被本站读取为结构化行情。</p><a id="chartExternal" target="_blank" rel="noopener noreferrer">在行情源查看 ↗</a></section>
+      <section class="panel" id="detailPanel"><h2>核查卡片</h2><div id="details" class="details">选择一个标的查看源时间与核查要求。</div></section>
+      <section class="panel rules"><h2>基金数据使用规则</h2><ul><li>纳斯达克100与纳斯达克综合分开展示。</li><li>红利低波策略不同，基金不能混用。</li><li>场外净值以披露日为准，QDII可能滞后。</li><li>实时溢价需同币种、时间相近且可验证的价格与官方IOPV。</li><li>申购额度按直销、具体代销渠道单独核查。</li></ul></section>
+    </aside>
+  </div>
+  <section class="panel sourcepanel"><div class="panelhead"><h2>数据与运行状态</h2><span class="badge">可核查</span></div><div id="sourceInfo" class="sourcegrid"><p class="muted">后台首次执行后显示。</p></div><details><summary>检查频率与数据边界</summary><p>网页在打开时每60秒拉取快照；后台默认使用 GitHub Actions，调度目标5分钟，可能排队延迟或漏跑。每分钟 Cloudflare 调度只有完成部署并接入后才会显示启用。关闭手机网页不会停止已部署的后台任务。</p><p>公共行情源无可用性或时延保证，访问失败保留旧报价和原时间；返回相同报价时间不会冒充新数据。场外净值按小时核查，不从最小申购金额推断申购上限。接口未配置、失败、限流与预算暂缓会单独标记。</p><p>页面是研究工具。没有账户连接、自动下单或交易信号。第三方行情仅供核查，交易价格与基金可买性以实际交易渠道为准。</p></details></section>
+  <footer>石小鑫的全球指数与基金观测平台 · <a href="https://github.com/sanqingzushi/-2" target="_blank" rel="noopener noreferrer">项目与运行记录 ↗</a><br>公开页面不保存私人账户、资产余额或API密钥。关注清单仅保存在当前浏览器。</footer>
 </main>
-<script>
-(function(){function stamp(){var n=new Date();return n.toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false});}document.getElementById('loadedAt').textContent=stamp();function tick(){document.getElementById('checkedAt').textContent=stamp();}tick();setInterval(tick,60000);document.getElementById('refreshBtn').addEventListener('click',function(){tick();this.textContent='已刷新状态';setTimeout(()=>this.textContent='刷新页面状态',1600);});document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');var f=b.dataset.filter;document.querySelectorAll('[data-market]').forEach(function(s){s.classList.toggle('hide',f!=='all'&&s.dataset.market!==f);});});});})();
-</script></body></html>
+<script type="module" src="./app.js"></script>
+</body></html>
