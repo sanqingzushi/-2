@@ -56,6 +56,7 @@ function renderDetails(changeChart = false) {
     + (obs.referenceFallback ? detailRow('日终参考核验时间',escape(timestamp(obs.referenceVerifiedAt))) + detailRow('参考性质','本次由公开编制方接口核验的日终记录；后台接口拒绝访问时保留，不能视为自动更新。') + detailRow('参考核验来源',link(obs.referenceRequestUrl,'编制方原始公开接口')) : '')
     + (obs.nextRetryAt ? detailRow('下次重试不早于',escape(timestamp(obs.nextRetryAt))) : '')
     + detailRow('来源', link(obs.sourceUrl || item.sourceUrl, obs.source || '查看标的来源'))
+    + (obs.sourceWarnings?.length ? detailRow('源字段说明',escape(obs.sourceWarnings.join(' '))) : '')
     + (!fund ? detailRow('行情性质', obs.observationType === 'official_end_of_day' ? '编制方公开日终价格指数；仅日级日期，按小时核查。' : obs.observationType === 'provider_continuous_future' ? '源连续合约报价；时延未知，映射月份未披露。' : '公开源报价；时延未知，不声明实时。') : detailRow('净值性质', '净值对应日期按源记录展示；实际发布时刻未知，QDII可能滞后。'))
     + (item.kind === 'future' ? detailRow('合约', escape(obs.sourceName || '尚未取得源合约记录')) : '')
     + (obs.changeBasis === 'source_previous_settlement' ? detailRow('涨跌口径', '相对源前结算价 ' + escape(format(obs.previousSettlement)) + '；不同于股票的前收盘价口径。') : '')

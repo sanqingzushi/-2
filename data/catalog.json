@@ -496,7 +496,8 @@
     "tvSymbol": "SSE:513100",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/513100.SS/"
+    "sourceUrl": "https://finance.yahoo.com/quote/513100.SS/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-513300",
@@ -507,7 +508,8 @@
     "tvSymbol": "SSE:513300",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/513300.SS/"
+    "sourceUrl": "https://finance.yahoo.com/quote/513300.SS/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-159941",
@@ -518,7 +520,8 @@
     "tvSymbol": "SZSE:159941",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/159941.SZ/"
+    "sourceUrl": "https://finance.yahoo.com/quote/159941.SZ/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-159632",
@@ -529,7 +532,8 @@
     "tvSymbol": "SZSE:159632",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/159632.SZ/"
+    "sourceUrl": "https://finance.yahoo.com/quote/159632.SZ/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-513500",
@@ -540,7 +544,8 @@
     "tvSymbol": "SSE:513500",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/513500.SS/"
+    "sourceUrl": "https://finance.yahoo.com/quote/513500.SS/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-513650",
@@ -551,7 +556,8 @@
     "tvSymbol": "SSE:513650",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/513650.SS/"
+    "sourceUrl": "https://finance.yahoo.com/quote/513650.SS/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-159655",
@@ -562,7 +568,8 @@
     "tvSymbol": "SZSE:159655",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/159655.SZ/"
+    "sourceUrl": "https://finance.yahoo.com/quote/159655.SZ/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-159612",
@@ -573,7 +580,8 @@
     "tvSymbol": "SZSE:159612",
     "currency": "CNY",
     "note": "",
-    "sourceUrl": "https://finance.yahoo.com/quote/159612.SZ/"
+    "sourceUrl": "https://finance.yahoo.com/quote/159612.SZ/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-515450",
@@ -584,7 +592,8 @@
     "tvSymbol": "SSE:515450",
     "currency": "CNY",
     "note": "008163的目标ETF；与512890不是同一产品。",
-    "sourceUrl": "https://finance.yahoo.com/quote/515450.SS/"
+    "sourceUrl": "https://finance.yahoo.com/quote/515450.SS/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "etf-512890",
@@ -595,7 +604,8 @@
     "tvSymbol": "SSE:512890",
     "currency": "CNY",
     "note": "跟踪中证红利低波动策略。",
-    "sourceUrl": "https://finance.yahoo.com/quote/512890.SS/"
+    "sourceUrl": "https://finance.yahoo.com/quote/512890.SS/",
+    "yahooInstrumentType": "EQUITY"
   },
   {
     "id": "cmb",

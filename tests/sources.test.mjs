@@ -83,7 +83,22 @@ test('an index with absent source currency stays unknown instead of assuming HKD
   const payload={chart:{result:[{meta:{symbol:'HSTECH.HK',instrumentType:'INDEX',currency:null,regularMarketPrice:100,regularMarketTime:(now-60000)/1000}}],error:null}};
   const parsed=parseYahoo(payload,item,now);
   assert.equal(parsed.price,100);assert.equal(parsed.currency,null);
-  assert.throws(()=>parseYahoo(payload,{...item,currency:'HKD'},now));
+  assert.equal(parseYahoo(payload,{...item,currency:'HKD'},now).currency,null);
+  assert.equal(parsed.currencyStatus,'not_provided');
+  assert.ok(parsed.sourceWarnings.length);
+  const wrong=structuredClone(payload);wrong.chart.result[0].meta.currency='USD';
+  assert.throws(()=>parseYahoo(wrong,{...item,currency:'HKD'},now));
+  assert.throws(()=>parseYahoo(payload,{...item,kind:'etf',currency:'HKD'},now));
+});
+
+test('ETF and stock observations require the matching source instrument class',()=>{
+  const item={id:'class-test',kind:'etf',symbol:'TEST',currency:'CNY'};
+  const p={chart:{result:[{meta:{symbol:'TEST',currency:'CNY',instrumentType:'INDEX',regularMarketPrice:1,regularMarketTime:(now-60000)/1000}}],error:null}};
+  assert.throws(()=>parseYahoo(p,item,now));
+  p.chart.result[0].meta.instrumentType='ETF';assert.equal(parseYahoo(p,item,now).price,1);
+  assert.throws(()=>parseYahoo(p,{...item,kind:'stock'},now));
+  p.chart.result[0].meta.instrumentType='EQUITY';assert.throws(()=>parseYahoo(p,item,now));
+  assert.equal(parseYahoo(p,{...item,yahooInstrumentType:'EQUITY'},now).price,1);
 });
 
 test('five futures share one HTTP request while each observation is validated separately',async()=>{
