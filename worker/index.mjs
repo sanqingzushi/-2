@@ -1,5 +1,5 @@
 import catalog from '../data/catalog.json' with { type: 'json' };
-import { collect } from '../lib/monitor.mjs';
+import { collect, COLLECTOR_VERSION } from '../lib/monitor.mjs';
 
 const databaseInitializers = new WeakMap();
 const schema = 'CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY CHECK(id = 1), payload TEXT NOT NULL, updated_at TEXT NOT NULL, started_at TEXT NOT NULL)';
@@ -33,14 +33,14 @@ export default {
     const path = new URL(request.url).pathname;
     if (request.method === 'OPTIONS') return new Response(null, { headers: { 'access-control-allow-origin': '*', 'access-control-allow-methods': 'GET, OPTIONS' } });
     if (request.method !== 'GET') return json({ error: 'method_not_allowed' }, 405);
-    if (path === '/') return json({ title: '石小鑫的全球指数与基金观测平台 · 分钟后台', portalUrl: 'https://sanqingzushi.github.io/-2/', healthPath: '/health', snapshotPath: '/api/snapshot', targetIntervalSeconds: 60, notice: '部署成功不等于行情已更新；请检查健康状态与两轮快照时间。' });
+    if (path === '/') return json({ title: '石小鑫的全球指数与基金观测平台 · 分钟后台', collectorVersion:COLLECTOR_VERSION, portalUrl: 'https://sanqingzushi.github.io/-2/', healthPath: '/health', snapshotPath: '/api/snapshot', targetIntervalSeconds: 60, notice: '部署成功不等于行情已更新；请检查健康状态与两轮快照时间。' });
     if (path !== '/health' && path !== '/api/snapshot') return json({ error: 'not_found' }, 404);
     try { await initializeDatabase(env.DB); }
     catch { return json({ error: 'database_unavailable' }, 503); }
     if (path === '/health') {
       const row = await env.DB.prepare('SELECT updated_at FROM snapshots WHERE id = 1').first();
       const ageSeconds = row ? Math.max(0, (Date.now() - Date.parse(row.updated_at)) / 1000) : null;
-      return json({ scheduler: 'cloudflare-cron', targetIntervalSeconds: 60, lastSnapshotAt: row?.updated_at || null, initialized: !!row, ready: !!row && Number.isFinite(ageSeconds) && ageSeconds <= 180, ageSeconds, status: !row ? 'waiting_first_run' : ageSeconds > 180 ? 'stale' : 'snapshot_available' });
+      return json({ collectorVersion:COLLECTOR_VERSION, scheduler: 'cloudflare-cron', targetIntervalSeconds: 60, lastSnapshotAt: row?.updated_at || null, initialized: !!row, ready: !!row && Number.isFinite(ageSeconds) && ageSeconds <= 180, ageSeconds, status: !row ? 'waiting_first_run' : ageSeconds > 180 ? 'stale' : 'snapshot_available' });
     }
     const row = await env.DB.prepare('SELECT payload FROM snapshots WHERE id = 1').first();
     if (!row) return json({ error: 'first_run_pending' }, 503);
