@@ -42,11 +42,11 @@
     <aside class="sidebar">
       <section class="panel chartpanel"><div class="panelhead"><h2 id="chartTitle">标普500</h2><span class="badge">源披露序列</span></div><div class="chart" id="chart"></div><p class="hint" id="chartHint">只绘制后台读取的源记录；不插入估算点，不把网页时间当行情时间。</p><a id="chartExternal" target="_blank" rel="noopener noreferrer">在行情源查看 ↗</a></section>
       <section class="panel" id="detailPanel"><h2>核查卡片</h2><div id="details" class="details">选择一个标的查看源时间与核查要求。</div></section>
-      <section class="panel rules"><h2>基金数据使用规则</h2><ul><li>纳斯达克100与纳斯达克综合分开展示。</li><li>红利低波策略不同，基金不能混用。</li><li>场外净值以披露日为准，QDII可能滞后。</li><li>实时溢价需同币种、时间相近且可验证的价格与官方IOPV。</li><li>申购额度按直销、具体代销渠道单独核查。</li></ul></section>
+      <section class="panel rules"><h2>基金数据使用规则</h2><ul><li>纳斯达克100与纳斯达克综合分开展示。</li><li>红利低波策略不同，基金不能混用。</li><li>场外净值按对应日期展示，QDII可能滞后。</li><li>实时溢价需同币种、时间相近且可验证的价格与官方IOPV。</li><li>申购额度按直销、具体代销渠道单独核查。</li></ul></section>
     </aside>
   </div>
   <section class="panel sourcepanel"><div class="panelhead"><h2>数据与运行状态</h2><span class="badge">可核查</span></div><div id="sourceInfo" class="sourcegrid"><p class="muted">后台首次执行后显示。</p></div><details><summary>检查频率与数据边界</summary><p>网页在打开时每60秒拉取快照；Cloudflare每分钟启动任务，优先检查纳指100、标普500、道指及对应美股期货，其余行情按最近读取时间轮转。每轮最多48次源请求，净值与标普公开日终指数按小时核查，期货历史日线按小时读取；不保证准点。快照超过3分钟未生成会提示超时。关闭网页不会停止云端任务。</p><p>源仅提供日期时只显示日期，不补造报价时刻。净值日期不是公告发布时间。中金所品种使用新浪连续报价，映射合约月份未知；不能当作固定月份合约，涨跌以源前结算价为基准。历史曲线只绘制源记录，一条记录不能形成曲线。</p><p>公共行情源无可用性或时延保证，访问失败保留旧报价和原时间；相同源时间不会冒充新数据。净值、估算净值和ETF价格均不代替IOPV；最小申购金额不当作申购上限。无账户连接、自动下单或交易信号。</p></details></section>
   <footer>石小鑫的全球指数与基金观测平台 · <a href="https://github.com/sanqingzushi/-2" target="_blank" rel="noopener noreferrer">项目与运行记录 ↗</a><br>公开页面不保存私人账户、资产余额或API密钥。关注清单仅保存在当前浏览器。</footer>
 </main>
-<script type="module" src="./app.js?v=20261024-2"></script>
+<script type="module" src="./app.js?v=20261024-3"></script>
 </body></html>

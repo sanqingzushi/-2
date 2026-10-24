@@ -134,3 +134,26 @@ test('cached daily index keeps its source date and does not consume minute quota
   assert.equal(result.statistics.httpRequests,0);assert.equal(result.items[0].checkStatus,'cached_quote');
   assert.equal(result.items[0].asOf,value.asOf);assert.equal(result.items[0].sourceTimeAdvanced,false);
 });
+
+test('verified daily reference never claims a successful cloud request when source access fails',async()=>{
+  const reference={id:spItem.id,...parseSpGlobal(sp(),spItem,now),referenceVerifiedAt:new Date(now-1000).toISOString(),referenceFallback:true};
+  const first=await collect([spItem],null,{now,references:[reference],fetchImpl:async()=>new Response('',{status:403})});
+  assert.equal(first.items[0].price,100);assert.equal(first.items[0].asOf,reference.asOf);
+  assert.equal(first.items[0].referenceFallback,true);assert.equal(first.items[0].lastSuccessAt,null);
+  assert.equal(first.statistics.succeeded,0);assert.equal(first.statistics.newQuoteTimestamps,0);
+  assert.equal(first.items[0].checkStatus,'error');
+  const second=await collect([spItem],first,{now:now+60000,references:[reference],fetchImpl:async()=>{throw Error('must back off');}});
+  assert.equal(second.statistics.httpRequests,0);assert.equal(second.items[0].checkStatus,'backoff');
+  assert.equal(second.items[0].lastAttemptAt,first.items[0].lastAttemptAt);
+  assert.equal(second.items[0].referenceVerifiedAt,reference.referenceVerifiedAt);
+});
+
+test('source recovery replaces a reference and a reference never overwrites an existing observation',async()=>{
+  const reference={id:spItem.id,...parseSpGlobal(sp(),spItem,now),referenceVerifiedAt:new Date(now-1000).toISOString(),referenceFallback:true};
+  const current={...reference,price:120,referenceFallback:false};
+  const failed=await collect([spItem],{items:[current]},{now,references:[reference],fetchImpl:async()=>new Response('',{status:503})});
+  assert.equal(failed.items[0].price,120);assert.equal(failed.items[0].referenceFallback,false);
+  const recovered=await collect([spItem],{items:[reference]},{now,references:[reference],fetchImpl:async()=>Response.json(sp())});
+  assert.equal(recovered.items[0].referenceFallback,false);assert.equal(recovered.items[0].checkStatus,'ok');
+  assert.equal(recovered.items[0].lastSuccessAt,new Date(now).toISOString());
+});

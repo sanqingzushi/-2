@@ -1,9 +1,10 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { collect } from '../lib/monitor.mjs';
 const catalog = JSON.parse(await readFile(new URL('../data/catalog.json', import.meta.url), 'utf8'));
+const references = JSON.parse(await readFile(new URL('../data/verified-reference.json', import.meta.url), 'utf8'));
 let previous = null;
 try { previous = JSON.parse(await readFile(process.env.PREVIOUS_SNAPSHOT || 'data/latest.json', 'utf8')); } catch { /* first run */ }
-const snapshot = await collect(catalog, previous);
+const snapshot = await collect(catalog, previous, {references});
 await mkdir('data', { recursive: true });
 await writeFile('data/latest.json', JSON.stringify(snapshot, null, 2) + '\n');
 console.log(JSON.stringify({ generatedAt: snapshot.generatedAt, scheduler: snapshot.scheduler, ...snapshot.statistics }));
