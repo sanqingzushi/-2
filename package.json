@@ -5,6 +5,17 @@
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "collect": "node scripts/collect.mjs",
-    "check": "node --check app.js && node --check lib/monitor.mjs && node --check worker/index.mjs"
+    "check": "node --check app.js && node --check lib/monitor.mjs && node --check worker/index.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.152.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "DB": {
+        "description": "保存石小鑫观测平台的公开行情快照；自动创建D1并初始化表，不保存账户或私人持仓。"
+      }
+    }
   }
 }

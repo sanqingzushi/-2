@@ -2,6 +2,21 @@
 
 网址：<https://sanqingzushi.github.io/-2/>
 
+## 无需云浏览器：部署分钟后台
+
+[![通过普通浏览器部署分钟后台](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/sanqingzushi/-2)
+
+用你自己的浏览器点击上方按钮，登录Cloudflare并完成GitHub授权即可进入部署设置；确认使用Free计划。配置与构建已通过本地验证，账户授权和线上部署尚需你完成。
+
+- 按钮会复制一份后端部署仓库，可取名 `shixiaoxin-market-backend`；原观测网站继续使用本仓库的GitHub Pages。复制仓库不会再运行GitHub备用采集。未来后端修改需同步到这份部署副本。
+- 如要直接连接现仓库而不复制：Cloudflare Dashboard → Workers & Pages → Create application → Import a repository，选择 `sanqingzushi/-2`，部署命令为 `npm run deploy`。
+- `wrangler.json` 配置了自动创建D1和每分钟Cron；应用首次访问或定时运行时自动建表，不需要手填数据库ID、API Token或执行SQL。
+- 首轮采集未完成时，`/health` 明确显示 `waiting_first_run`；不能把“部署成功”当作行情已刷新。Cron配置传播可能需要等待，必须看到快照时间实际推进。
+- 部署完成后提供公开的 `https://….workers.dev` 地址。接入前须验证 `/health` 与连续两轮 `/api/snapshot`，然后修改本仓库的前端地址并停用重复备用采集。
+- 未完成线上验证前，原站继续读取GitHub快照，不假装每分钟后台已经启用。
+
+2026-10-24核查记录：GitHub的配置目标虽为5分钟，但已观察到计划任务间隔超过2小时；因此它仅作备用，不能视为稳定5分钟或实时监测。
+
 公开手机页面，GitHub Pages 从 `main / (root)` 发布。无账户连接、自动下单或买入信号。关注标的保存在当前浏览器，不上传个人持仓或资产。
 
 ## 已实现
@@ -45,17 +60,9 @@ node scripts/collect.mjs
 
 无需安装第三方运行依赖。Node 24；本地采集结果 `data/latest.json` 不提交。测试中的数字仅为明确的测试fixture，绝不会发布为市场快照。
 
-## 每分钟部署（代码已提供，未部署不算启用）
+## 每分钟后台配置
 
-Cloudflare Workers + D1，共享同一采集逻辑。使用 `worker/index.mjs`、`worker/schema.sql` 与 `wrangler.example.jsonc`。D1每分钟只更新一个快照，不按标的逐行写，正常约1,440次快照更新/天。
-
-1. 登录Cloudflare，确认Free计划，不开通付费服务。
-2. 创建D1数据库 `shixiaoxin-market-monitor`，执行 `worker/schema.sql`。
-3. 复制 `wrangler.example.jsonc` 为忽略提交的 `wrangler.jsonc`，填真实数据库ID。
-4. 使用官方Wrangler部署，配置 `* * * * *` 调度。
-5. 验证 `/health`、`/api/snapshot`，连续观察两轮真实后台时间推进。
-6. 把 `data/runtime.json` 的 `snapshotUrl` 改为实际Worker的 `/api/snapshot`，重新发布前端。未通过验证时保留GitHub版本。
-7. 切换后停用GitHub采集schedule以免重复轮询；保留手动工作流作备用。
+Cloudflare Workers + D1共享同一采集逻辑。正式部署配置在 `wrangler.json`；`wrangler.example.jsonc` 仅保留为手动绑定已有数据库的参考。D1每分钟只更新一个快照，不按标的逐行写，正常约1,440次快照更新/天。资源自动创建，应用幂等初始化表结构。构建命令 `npm run deploy` 不需要云端浏览器。
 
 Worker限制每轮最多48个外部请求，当前46项行情优先，基金净值按最久未读排序填余量，冷启动约6轮补齐12项净值。公开行情源可能限流、变更或拒绝云端访问，错误会明确显示；HTTP429后退避15分钟。免费计划的CPU、子请求和数据源额度仍需部署后实测，不能承诺永不超限。
 
@@ -70,9 +77,10 @@ Worker限制每轮最多48个外部请求，当前46项行情优先，基金净�
 ## 依据
 
 - GitHub调度与限制：<https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule>
-- TradingView行情边界：<https://www.tradingview.com/widget-docs/faq/data/>
+- Cloudflare部署按钮与自动资源配置：<https://developers.cloudflare.com/workers/platform/deploy-buttons/>
+- Wrangler自动资源创建：<https://developers.cloudflare.com/changelog/post/2025-10-24-automatic-resource-provisioning/>
 - Cloudflare每分钟Cron：<https://developers.cloudflare.com/workers/configuration/cron-triggers/>
 - Workers额度：<https://developers.cloudflare.com/workers/platform/limits/>
 - D1额度：<https://developers.cloudflare.com/d1/platform/pricing/>
 
-更新日期：2026-10-23（北京时间）。
+更新日期：2026-10-24（北京时间）。
