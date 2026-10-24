@@ -81,7 +81,7 @@ function renderStatus() {
   if (!snapshot) return;
   const age = (Date.now() - Date.parse(snapshot.generatedAt)) / 1000;
   const target = snapshot.scheduler?.targetIntervalSeconds || 300;
-  const late = !Number.isFinite(age) || age > Math.max(target * 3, 900);
+  const late = !Number.isFinite(age) || age > Math.max(target * 3, 180);
   $('cloudCheck').textContent = timestamp(snapshot.generatedAt);
   $('cadence').textContent = `${snapshot.scheduler?.name === 'cloudflare-cron' ? '每分钟' : '每5分钟'} · 不保证准点`;
   $('cloudState').textContent = late ? '快照超时，可能未运行' : '已取得快照 · 非实时保证';
@@ -93,7 +93,8 @@ function renderStatus() {
   const configured = catalog.filter(x => x.symbol).length;
   const withQuote = snapshot.items.filter(x => validNumber(x.price)).length;
   const withNav = snapshot.items.filter(x => validNumber(x.nav)).length;
-  $('sourceInfo').innerHTML = `<div><strong>行情：Yahoo Finance 公共接口</strong><p>${withQuote} / ${configured} 项有价格记录。每行保留源报价时间；时延未知，无实时承诺。${link('https://finance.yahoo.com/', '行情源')}</p></div><div><strong>净值：天天基金公开披露</strong><p>${withNav} 项有单位净值，按小时核查；实际披露日单独显示。IOPV与渠道限额尚未接入。</p></div><div><strong>后台：${escape(snapshot.scheduler?.name)}</strong><p>生成时间 ${escape(timestamp(snapshot.generatedAt))}。${link('https://github.com/sanqingzushi/-2/actions/workflows/monitor.yml', '后台运行记录')} · ${link(runtime.snapshotUrl, '原始快照')}</p></div>`;
+  const backendStatus = snapshot.scheduler?.name === 'cloudflare-cron' ? link(runtime.healthUrl, '后台健康状态') : link('https://github.com/sanqingzushi/-2/actions/workflows/monitor.yml', '后台运行记录');
+  $('sourceInfo').innerHTML = `<div><strong>行情：Yahoo Finance 公共接口</strong><p>${withQuote} / ${configured} 项有价格记录。每行保留源报价时间；时延未知，无实时承诺。${link('https://finance.yahoo.com/', '行情源')}</p></div><div><strong>净值：天天基金公开披露</strong><p>${withNav} 项有单位净值，按小时核查；实际披露日单独显示。IOPV与渠道限额尚未接入。</p></div><div><strong>后台：${escape(snapshot.scheduler?.name)}</strong><p>生成时间 ${escape(timestamp(snapshot.generatedAt))}。${backendStatus} · ${link(runtime.snapshotUrl, '原始快照')}</p></div>`;
 }
 
 async function fetchSnapshot() {
@@ -131,7 +132,7 @@ try {
   const values = await Promise.all(['./data/catalog.json','./data/runtime.json'].map(async url => { const r = await fetch(url, { cache:'no-store' }); if (!r.ok) throw new Error('配置请求失败'); return r.json(); }));
   [catalog, runtime] = values;
   $('totalCount').textContent = catalog.length;
-  $('cadence').textContent = '每5分钟 · GitHub Actions';
+  $('cadence').textContent = `${runtime.nominalIntervalSeconds === 60 ? '每分钟' : '每5分钟'} · 等待后台快照验证`;
   renderRows(); renderDetails(true);
   await fetchSnapshot();
   setInterval(fetchSnapshot, 60000);

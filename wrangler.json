@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "shixiaoxin-market-monitor",
+  "name": "2",
   "main": "worker/index.mjs",
   "compatibility_date": "2026-10-24",
   "workers_dev": true,

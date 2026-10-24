@@ -1,12 +1,7 @@
 name: Cloud market checks
 on:
+  # Manual backup. The production collector now runs on Cloudflare every minute.
   workflow_dispatch:
-  schedule:
-    # Nominal five-minute cadence. GitHub may delay or drop scheduled runs.
-    - cron: '2-59/5 * * * *'
-  push:
-    branches: [main]
-    paths: ['lib/**', 'scripts/**', 'tests/**', 'data/catalog.json', '.github/workflows/monitor.yml']
 permissions:
   contents: write
 concurrency:

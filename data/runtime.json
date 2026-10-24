@@ -1,5 +1,6 @@
 {
-  "snapshotUrl": "https://raw.githubusercontent.com/sanqingzushi/-2/monitor-data/latest.json",
-  "scheduler": "github-actions",
-  "nominalIntervalSeconds": 300
+  "snapshotUrl": "https://2.2815956617.workers.dev/api/snapshot",
+  "healthUrl": "https://2.2815956617.workers.dev/health",
+  "scheduler": "cloudflare-cron",
+  "nominalIntervalSeconds": 60
 }

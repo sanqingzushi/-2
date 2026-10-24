@@ -45,8 +45,8 @@
       <section class="panel rules"><h2>基金数据使用规则</h2><ul><li>纳斯达克100与纳斯达克综合分开展示。</li><li>红利低波策略不同，基金不能混用。</li><li>场外净值以披露日为准，QDII可能滞后。</li><li>实时溢价需同币种、时间相近且可验证的价格与官方IOPV。</li><li>申购额度按直销、具体代销渠道单独核查。</li></ul></section>
     </aside>
   </div>
-  <section class="panel sourcepanel"><div class="panelhead"><h2>数据与运行状态</h2><span class="badge">可核查</span></div><div id="sourceInfo" class="sourcegrid"><p class="muted">后台首次执行后显示。</p></div><details><summary>检查频率与数据边界</summary><p>网页在打开时每60秒拉取快照；后台默认使用 GitHub Actions，调度目标5分钟，可能排队延迟或漏跑。每分钟 Cloudflare 调度只有完成部署并接入后才会显示启用。关闭手机网页不会停止已部署的后台任务。</p><p>公共行情源无可用性或时延保证，访问失败保留旧报价和原时间；返回相同报价时间不会冒充新数据。场外净值按小时核查，不从最小申购金额推断申购上限。接口未配置、失败、限流与预算暂缓会单独标记。</p><p>页面是研究工具。没有账户连接、自动下单或交易信号。第三方行情仅供核查，交易价格与基金可买性以实际交易渠道为准。</p></details></section>
+  <section class="panel sourcepanel"><div class="panelhead"><h2>数据与运行状态</h2><span class="badge">可核查</span></div><div id="sourceInfo" class="sourcegrid"><p class="muted">后台首次执行后显示。</p></div><details><summary>检查频率与数据边界</summary><p>网页在打开时每60秒拉取快照；云端使用 Cloudflare Workers 与 D1，行情检查目标每分钟，场外净值按小时核查，均不保证准点。后台快照超过3分钟未生成会提示超时。关闭手机网页不会停止后台任务；GitHub Actions 保留为手动备用。</p><p>公共行情源无可用性或时延保证，访问失败保留旧报价和原时间；返回相同报价时间不会冒充新数据。场外净值按小时核查，不从最小申购金额推断申购上限。接口未配置、失败、限流与预算暂缓会单独标记。</p><p>页面是研究工具。没有账户连接、自动下单或交易信号。第三方行情仅供核查，交易价格与基金可买性以实际交易渠道为准。</p></details></section>
   <footer>石小鑫的全球指数与基金观测平台 · <a href="https://github.com/sanqingzushi/-2" target="_blank" rel="noopener noreferrer">项目与运行记录 ↗</a><br>公开页面不保存私人账户、资产余额或API密钥。关注清单仅保存在当前浏览器。</footer>
 </main>
-<script type="module" src="./app.js?v=20261023-3"></script>
+<script type="module" src="./app.js?v=20261024-1"></script>
 </body></html>
